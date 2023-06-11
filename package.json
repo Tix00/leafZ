@@ -12,5 +12,10 @@
 		"build": "astro build",
 		"preview": "astro preview",
 		"format": "npx prettier -w ."
+	},
+	"dependencies": {
+		"@astrojs/react": "^2.2.1",
+		"astro-imagetools": "^0.8.1",
+		"react": "^18.2.0"
 	}
 }

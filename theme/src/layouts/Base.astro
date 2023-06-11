@@ -15,12 +15,14 @@ const { seo } = Astro.props;
 		<BaseHead {...seo} />
 	</head>
 	<body>
-		<SkipLink />
-    <slot name="announcement-bar" />
-		<slot name="header" />
-		<main id="content">
-			<slot />
-		</main>
-		<slot name="footer" />
+		<div class="backgroundimg">
+			<SkipLink />
+		<slot name="announcement-bar" />
+			<slot name="header" />
+			<main id="content">
+				<slot />
+			</main>
+			<slot name="footer" />
+		</div>
 	</body>
 </html>
