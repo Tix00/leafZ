@@ -14,13 +14,14 @@ body {
 	
 }
 
-.backgroundimg::before {
+body::before {
 	background-image: url("../../../../assets/images/background/vecteezy_tropical-leaf-background.jpg");
 	background-size: cover;
 	content: '';
 	position: absolute;
 	inset: 0;
 	opacity: 0.2;
+	background-repeat: no-repeat;
 }
 pre {
   padding: 1em;

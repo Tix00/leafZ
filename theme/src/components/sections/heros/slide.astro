@@ -1,0 +1,39 @@
+<astro:script>
+  import React from 'react';
+  import { Fragment } from 'react';
+  import { useBlazeSlider } from 'react-blaze-slider';
+  import 'blaze-slider/dist/blaze.css';
+
+  export default function SlideShow() {
+    const ref = {};
+
+    // Use the `onMount` hook to initialize the ref
+    astro.onMount(() => {
+      ref.current = useBlazeSlider({
+        all: {
+          slidesToShow: 3,
+        },
+      });
+    });
+
+    return (
+      <>
+        <div className="App">
+          <div className="blaze-slider" ref={ref}>
+            <div className="blaze-container">
+              <div className="blaze-track-container">
+                <div className="blaze-track">
+                  <div>1</div>
+                  <div>2</div>
+                  <div>3</div>
+                  <div>4</div>
+                  <div>5</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </>
+    );
+  }
+</astro:script>
