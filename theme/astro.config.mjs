@@ -4,7 +4,7 @@ import mdx from "@astrojs/mdx";
 import image from "@astrojs/image";
 import lit from "@astrojs/lit";
 //import react from "@astrojs/react";
-import { astroImageTools } from "astro-imagetools";
+//import { astroImageTools } from "astro-imagetools";
 
 // https://astro.build/config
 export default defineConfig({
