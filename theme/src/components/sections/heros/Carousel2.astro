@@ -1,0 +1,46 @@
+---
+import { createRenderEffect } from 'https://cdn.skypack.dev/astro';
+import { Container } from '@astrojs/components';
+export default function Slider() {
+  createRenderEffect(() => {
+    const el = document.querySelector('.blaze-slider');
+    new window.BlazeSlider(el, {
+      all: {
+        slidesToShow: 1,
+        enableAutoplay: true,
+        loop: true
+      }
+    });
+
+    // Clean up the slider instance when the component unmounts
+    return () => {
+      // Perform any necessary cleanup here
+    };
+  });
+
+  return (
+    <>
+      <Container>
+        <div class="blaze-slider">
+          <div class="blaze-container">
+            <div class="blaze-track-container">
+              <div class="blaze-track">
+                <div>slide 1</div>
+                <div>slide 2</div>
+                <div>slide 3</div>
+                <div>slide 4</div>
+              </div>
+            </div>
+          </div>
+      
+          
+          <button class="blaze-prev">previous</button>
+          <button class="blaze-next">next</button>
+      
+          
+          <div class="blaze-pagination"></div>
+        </div>
+      </Container>
+    </>
+  );
+}

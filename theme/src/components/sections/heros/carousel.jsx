@@ -2,7 +2,11 @@ import React from 'react';
 import { useBlazeSlider } from 'react-blaze-slider';
 import 'blaze-slider/dist/blaze.css';
 import ImageGallery from './loadGallery.jsx';
+
+
 export default function slideShow() {
+
+  
   const ref = useBlazeSlider({
     all: {
       slidesToShow: 1,
