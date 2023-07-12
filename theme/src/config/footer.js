@@ -23,15 +23,11 @@ export const footerSocials = [
 
 export const footerLists = [
 	{
-		title: 'Landing Pages',
+		title: 'Home page',
 		items: [
 			{
-				title: 'Landing Page 1',
-				slug: '/landing-pages/landing-1',
-			},
-			{
-				title: 'Landing Page 2',
-				slug: '/landing-pages/landing-2',
+				title: 'Homepage',
+				slug: '/',
 			},
       // {
 			// 	title: 'Landing Page 3',
@@ -43,7 +39,7 @@ export const footerLists = [
 		title: 'Company',
 		items: [
 			{
-				title: 'About',
+				title: 'Chi siamo',
 				slug: '/company/about',
 			},
 			{
@@ -60,7 +56,7 @@ export const footerLists = [
 		title: 'Theme',
 		items: [
 			{
-				title: 'Get Started',
+				title: 'I nostri prodotti',
 				slug: '/theme/get-started',
 			},
 			{

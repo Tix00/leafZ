@@ -9,7 +9,7 @@ body {
 	background-color: var(--theme-bg);
 	position: relative;
 }
-
+/*
 .backgroundimg {
 	
 }
@@ -23,6 +23,7 @@ body::before {
 	opacity: 0.2;
 	background-repeat: no-repeat;
 }
+*/
 pre {
   padding: 1em;
   border-radius: 0.5em;
