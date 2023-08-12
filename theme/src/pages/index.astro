@@ -1,105 +1,84 @@
 ---
-import {Icon} from 'astro-icon'
+import { Icon } from "astro-icon";
 import {
   AnnouncementBar,
-	Button,
-	CustomerQuoteSection,
-	ThreeColumnTextSection,
-	YouTubeEmbedSection,
+  Button,
+  CustomerQuoteSection,
+  ThreeColumnTextSection,
+  YouTubeEmbedSection,
   StickyTextImageSection,
-  CtaCardSection
-} from '@littlesticks/odyssey-theme-components';
+  CtaCardSection,
+} from "@littlesticks/odyssey-theme-components";
 
-import Layout from '../layouts/Page.astro';
-import TextAndImageHero from '../components/sections/heros/TextAndImageHero.astro';
-//import SlideShow from '../components/sections/heros/carousel.jsx';
+import Layout from "../layouts/Page.astro";
+import TextAndImageHero from "../components/sections/heros/TextAndImageHero.astro";
+import car3 from "../components/sections/heros/CaroComp.astro";
+
 //import SlideShow2 from '../components/sections/heros/Carousel2.astro';
 const seo = {
-	title: 'Home page | Astro Odyssey Theme',
-	description: "Benvenuti nel nostro paradiso eco-friendly di prodotti esclusivi realizzati con gusci di cocco! Esplorate la nostra vasta gamma di gioielli stupefacenti, tazze e altre creazioni straordinarie, tutte accuratamente lavorate con gusci di cocco sostenibili. Abbracciate la perfetta fusione tra natura e stile mentre vi adornate con i nostri gioielli esquisiti o sorseggiate dalle nostre tazze realizzate con gusci di cocco, rispettando l'ambiente. Ogni pezzo è attentamente progettato per riflettere il nostro impegno verso l'ecosostenibilità, garantendo che possiate concedervi prodotti di lusso senza sensi di colpa. Unitevi a noi in questo viaggio sostenibile e scoprite la bellezza che si cela all'interno della nostra straordinaria collezione di gusci di cocco",
+  title: "Leafzen | Leafzen: il cocco in fantasia",
+  description:
+    "Benvenuti nel nostro paradiso eco-friendly di prodotti esclusivi realizzati con gusci di cocco! Esplorate la nostra vasta gamma di gioielli stupefacenti, tazze e altre creazioni straordinarie, tutte accuratamente lavorate con gusci di cocco sostenibili. Abbracciate la perfetta fusione tra natura e stile mentre vi adornate con i nostri gioielli esquisiti o sorseggiate dalle nostre tazze realizzate con gusci di cocco, rispettando l'ambiente. Ogni pezzo è attentamente progettato per riflettere il nostro impegno verso l'ecosostenibilità, garantendo che possiate concedervi prodotti di lusso senza sensi di colpa. Unitevi a noi in questo viaggio sostenibile e scoprite la bellezza che si cela all'interno della nostra straordinaria collezione di gusci di cocco",
 };
+import SwiperComponent from "../components/sections/heros/test.astro";
 ---
 
-<Layout seo={seo} >
-	<TextAndImageHero reversed>
-		<div slot="text-container">
-			<h1>Esplora l'eleganza naturale dei nostri gioielli e oggetti in gusci di cocco</h1>
-			<p></p>
-		</div>
-		<div slot="btns-container">
-			<Button href="/theme/get-started" customIcon
-				>I nostri prodotti <Fragment slot="icon">
-          <Icon name="ic:baseline-chevron-right"/>
+<Layout {seo}>
+  <TextAndImageHero reversed>
+    <div slot="text-container">
+      <h1>
+        Esplora l'eleganza naturale dei nostri gioielli e oggetti in gusci di
+        cocco
+      </h1>
+      <p></p>
+    </div>
+    <div slot="btns-container">
+      <Button href="/theme/get-started" customIcon
+        >I nostri prodotti <Fragment slot="icon">
+          <Icon name="ic:baseline-chevron-right" />
         </Fragment></Button
-			>
-		</div>
-		<picture slot="image-container">
-			<img
-				src="/assets/images/test.png"
-				alt="Astro Odyssee"
-				id="home-hero-image"
-			/>
-		</picture>
-	</TextAndImageHero>
+      >
+    </div>
+    <div slot="text-container">
+      <SwiperComponent />
+    </div>
+    <!-- <picture slot="image-container">
+       <SwiperComponent />
+    </picture> -->
+  </TextAndImageHero>
 
-	<CustomerQuoteSection
-		quoteText="Scopri la magia di prodotti artigianali realizzati con amore utilizzando gusci di cocco sostenibili. Dai un tocco di classe al tuo look con gioielli unici o goditi una bevanda sostenibile con tazze eco-friendly. Scegli la bellezza e l'originalità dei materiali naturali mentre sostieni la salvaguardia dell'ambiente. Esplora la collezione e innamorati della perfezione creativa dei gusci di cocco trasformati in opere d'arte senza tempo."
-		customerName=""
-	/>
+  <CustomerQuoteSection
+    quoteText="Scopri la magia di prodotti artigianali realizzati con amore utilizzando gusci di cocco sostenibili. Dai un tocco di classe al tuo look con gioielli unici o goditi una bevanda sostenibile con tazze eco-friendly. Scegli la bellezza e l'originalità dei materiali naturali mentre sostieni la salvaguardia dell'ambiente. Esplora la collezione e innamorati della perfezione creativa dei gusci di cocco trasformati in opere d'arte senza tempo."
+    customerName=""
+  />
+  <SwiperComponent />
 
-	
-
-	
-
-	
-		 
-		
-
-	<ThreeColumnTextSection>
-		<div slot="column-1-body">
-			<h2>Chi siamo</h2>
-			<p>
-				Ci impegniamo a utilizzare esclusivamente gusci di cocco provenienti da fonti sostenibili, contribuendo alla protezione dell'ambiente e alla riduzione dell'impatto ambientale.
-			</p>
-		</div>
-		<Button slot="column-1-cta">Learn More</Button>
-		<div slot="column-2-body">
-			<h2>I nostri prodotti</h2>
-			<p>
-				I nostri gioielli e oggetti in gusci di cocco si distinguono per il loro design unico e l'eleganza naturale, offrendo un tocco di originalità al tuo look o alla tua casa.
-			</p>
-		</div>
-		<Button slot="column-2-cta" outlined>Learn More</Button>
-		<div slot="column-3-body">
-			<h2>Il nostro valore</h2>
-			<p>
-				La lavorazione artigianale conferisce a ogni oggetto una caratteristica unica. Il risultato è una fusione armoniosa tra natura e arte, fornendo prodotti di altissima qualità.
-			</p>
-		</div>
-		<Button slot="column-3-cta">Learn More</Button>
-	</ThreeColumnTextSection>
-
-	<YouTubeEmbedSection url="https://www.youtube.com/watch?v=cbYr75_R15M" rounded />
+  <!-- <YouTubeEmbedSection url="https://www.youtube.com/watch?v=cbYr75_R15M" rounded
+  /> -->
 
   <StickyTextImageSection>
     <div slot="text-container">
       <h2>La nostra missione</h2>
       <h3>Ecosostenibilità</h3>
       <p>
-        Come azienda sostenibile, ci preoccupiamo di ridurre l'impatto ambientale delle nostre attività. 
-		Oltre a utilizzare materiali naturali e rinnovabili, 
-		adottiamo processi di produzione responsabili che minimizzano lo spreco di risorse e l'emissione di sostanze nocive nell'ambiente. 
-		Ci impegniamo a ridurre la nostra impronta ecologica e a lasciare un'impronta positiva sul pianeta che tutti condividiamo.
+        Come azienda sostenibile, ci preoccupiamo di ridurre l'impatto
+        ambientale delle nostre attività. Oltre a utilizzare materiali naturali
+        e rinnovabili, adottiamo processi di produzione responsabili che
+        minimizzano lo spreco di risorse e l'emissione di sostanze nocive
+        nell'ambiente. Ci impegniamo a ridurre la nostra impronta ecologica e a
+        lasciare un'impronta positiva sul pianeta che tutti condividiamo.
       </p>
       <h3>Responsabilità</h3>
-        <p>
-			Crediamo nella creazione di una catena di approvvigionamento etica e nel promuovere il commercio equo, 
-			garantendo che ogni persona coinvolta nella produzione dei nostri prodotti riceva un trattamento giusto e dignitoso. 
-			Sosteniamo il concetto di responsabilità sociale d'impresa, riconoscendo l'importanza di lasciare un impressione positiva e di lavorare 
-			per un futuro più equo ed inclusivo per tutti.
+      <p>
+        Crediamo nella creazione di una catena di approvvigionamento etica e nel
+        promuovere il commercio equo, garantendo che ogni persona coinvolta
+        nella produzione dei nostri prodotti riceva un trattamento giusto e
+        dignitoso. Sosteniamo il concetto di responsabilità sociale d'impresa,
+        riconoscendo l'importanza di lasciare un impressione positiva e di
+        lavorare per un futuro più equo ed inclusivo per tutti.
       </p>
     </div>
-     <picture slot="image-container">
+    <picture slot="image-container">
       <img
         src="/assets/images/landing-1/coconutPalm.jpg"
         alt="Astro Odyssey"
@@ -108,13 +87,19 @@ const seo = {
     </picture>
   </StickyTextImageSection>
 
-  <CtaCardSection background="var(--theme-surface-2)" color="var(--theme-on-surface-2)">
+  <CtaCardSection
+    background="var(--theme-surface-2)"
+    color="var(--theme-on-surface-2)"
+  >
     <h2>Scopri i nostri negozi</h2>
-    <p>It only takes a couple clicks to have a new, modern website for your business or startup.</p>
-    <Button href="/theme/get-started" customIcon>Get Started <Fragment slot="icon">
-      <Icon name="ic:baseline-chevron-right"/>
-    </Fragment></Button>
+    <p>
+      It only takes a couple clicks to have a new, modern website for your
+      business or startup.
+    </p>
+    <Button href="/theme/get-started" customIcon
+      >Get Started <Fragment slot="icon">
+        <Icon name="ic:baseline-chevron-right" />
+      </Fragment></Button
+    >
   </CtaCardSection>
-
 </Layout>
-

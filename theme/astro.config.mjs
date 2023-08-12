@@ -21,7 +21,7 @@ export default defineConfig({
       external: ["svgo"],
     },
   },
-  scripts: { 
+  scripts: {
     beforeDevServer: () => {
       process.env.REACT_DEV_MODE = 'true';
     },

@@ -9,6 +9,9 @@ body {
 	background-color: var(--theme-bg);
 	position: relative;
 }
+
+
+
 /*
 .backgroundimg {
 	
@@ -25,11 +28,11 @@ body::before {
 }
 */
 pre {
-  padding: 1em;
-  border-radius: 0.5em;
-  overflow: auto;
+	padding: 1em;
+	border-radius: 0.5em;
+	overflow: auto;
 }
 
 pre .language-id {
-  display: none;
+	display: none;
 }
