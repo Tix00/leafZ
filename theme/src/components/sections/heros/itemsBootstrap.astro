@@ -1,0 +1,45 @@
+---
+
+import { Carousel } from 'astro-bootstrap';
+
+const images = await Astro.glob(
+"../../../../public/assets/images/items/*"
+).then((files) => {
+  return files.map((file) => file.default);
+});
+
+var slides = [
+{ img: '../../../../public/assets/images/coverphoto.png', alt: 'Cover photo', active: true },
+{ img: '../../../../public/assets/images/items/Collane.png', alt: 'Cover photo', active: false }
+]
+const id = 'carouselExampleBasic';
+/* 
+images.map(image => (
+    <div class="carousel-item">
+      <img
+        class="d-block w-100"
+        src={image.src}
+        alt=""
+        loading="lazy"
+      />
+    </div>
+  )) */
+---
+
+<Carousel {id} fade>
+  <Carousel.Indicators {id} {slides} />
+  <Carousel.Inner>
+    {
+      slides.map((slide) => (
+        <Carousel.Item active={slide.active}>
+          <img
+            src={slide.img}
+            class="d-block w-100 img-fluid"
+            alt={slide.alt}
+          />
+        </Carousel.Item>
+      ))
+    }
+  </Carousel.Inner>
+  <Carousel.Controls id={id} />
+</Carousel>

@@ -1,6 +1,9 @@
 {
   "dependencies": {
+    "astro-bootstrap": "^0.6.1",
     "blaze-slider": "^1.9.3",
+    "lightgallery": "^2.7.1",
+    "photoswipe": "^5.3.8",
     "swiper": "^10.1.0"
   }
 }

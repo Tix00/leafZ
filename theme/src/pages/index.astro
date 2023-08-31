@@ -1,4 +1,5 @@
 ---
+import "../../../node_modules/bootstrap/scss/bootstrap.scss";
 import { Icon } from "astro-icon";
 import {
   AnnouncementBar,
@@ -8,11 +9,13 @@ import {
   YouTubeEmbedSection,
   StickyTextImageSection,
   CtaCardSection,
+  Container,
 } from "@littlesticks/odyssey-theme-components";
 
 import Layout from "../layouts/Page.astro";
 import TextAndImageHero from "../components/sections/heros/TextAndImageHero.astro";
 import car3 from "../components/sections/heros/CaroComp.astro";
+import Carandtext from "../components/sections/heros/items.astro";
 
 //import SlideShow2 from '../components/sections/heros/Carousel2.astro';
 const seo = {
@@ -20,7 +23,7 @@ const seo = {
   description:
     "Benvenuti nel nostro paradiso eco-friendly di prodotti esclusivi realizzati con gusci di cocco! Esplorate la nostra vasta gamma di gioielli stupefacenti, tazze e altre creazioni straordinarie, tutte accuratamente lavorate con gusci di cocco sostenibili. Abbracciate la perfetta fusione tra natura e stile mentre vi adornate con i nostri gioielli esquisiti o sorseggiate dalle nostre tazze realizzate con gusci di cocco, rispettando l'ambiente. Ogni pezzo è attentamente progettato per riflettere il nostro impegno verso l'ecosostenibilità, garantendo che possiate concedervi prodotti di lusso senza sensi di colpa. Unitevi a noi in questo viaggio sostenibile e scoprite la bellezza che si cela all'interno della nostra straordinaria collezione di gusci di cocco",
 };
-import SwiperComponent from "../components/sections/heros/test.astro";
+import SwiperComponent from "../components/sections/heros/items.astro";
 ---
 
 <Layout {seo}>
@@ -33,15 +36,16 @@ import SwiperComponent from "../components/sections/heros/test.astro";
       <p></p>
     </div>
     <div slot="btns-container">
-      <Button href="/theme/get-started" customIcon
+      <Button href="/company/products" customIcon
         >I nostri prodotti <Fragment slot="icon">
           <Icon name="ic:baseline-chevron-right" />
         </Fragment></Button
       >
     </div>
-    <div slot="text-container">
+    <Container slot="image-container">
       <SwiperComponent />
-    </div>
+    </Container>
+
     <!-- <picture slot="image-container">
        <SwiperComponent />
     </picture> -->
@@ -51,7 +55,6 @@ import SwiperComponent from "../components/sections/heros/test.astro";
     quoteText="Scopri la magia di prodotti artigianali realizzati con amore utilizzando gusci di cocco sostenibili. Dai un tocco di classe al tuo look con gioielli unici o goditi una bevanda sostenibile con tazze eco-friendly. Scegli la bellezza e l'originalità dei materiali naturali mentre sostieni la salvaguardia dell'ambiente. Esplora la collezione e innamorati della perfezione creativa dei gusci di cocco trasformati in opere d'arte senza tempo."
     customerName=""
   />
-  <SwiperComponent />
 
   <!-- <YouTubeEmbedSection url="https://www.youtube.com/watch?v=cbYr75_R15M" rounded
   /> -->
@@ -92,10 +95,7 @@ import SwiperComponent from "../components/sections/heros/test.astro";
     color="var(--theme-on-surface-2)"
   >
     <h2>Scopri i nostri negozi</h2>
-    <p>
-      It only takes a couple clicks to have a new, modern website for your
-      business or startup.
-    </p>
+    <p></p>
     <Button href="/theme/get-started" customIcon
       >Get Started <Fragment slot="icon">
         <Icon name="ic:baseline-chevron-right" />

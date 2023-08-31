@@ -1,0 +1,25 @@
+---
+import {
+    AnnouncementBar,
+    Button,
+    CustomerQuoteSection,
+    ThreeColumnTextSection,
+    YouTubeEmbedSection,
+    StickyTextImageSection,
+    CtaCardSection,
+    Container,
+    TextSection,
+} from "@littlesticks/odyssey-theme-components";
+import Layout from "../../layouts/Page.astro";
+import ProdGallery from "../../components/sections/heros/photogallery.astro";
+const seo = {
+    title: `Legal Page | Astro Odyssey Theme`,
+    description: `This is the legal page template. It is a great starter for your company's Terms of Service, Terms & Conditions, Privacy Policy, etc.`,
+};
+---
+
+<Layout {seo}>
+    <TextSection>
+        <ProdGallery />
+    </TextSection>
+</Layout>

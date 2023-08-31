@@ -24,10 +24,17 @@
 		"astro-icon": "^0.7.3",
 		"date-fns": "^2.28.0",
 		"lit": "^2.3.1",
-		"prettier-plugin-astro": "^0.0.12"
+		"prettier-plugin-astro": "^0.0.12",
+		"sass": "^1.66.1"
 	},
 	"dependencies": {
+		"@fancyapps/ui": "^5.0.22",
+		"@julian_cataldo/astro-lightbox": "^0.10.11",
 		"blaze-slider": "^1.9.3",
+		"bootstrap": "^5.3.1",
+		"bs5-lightbox": "^1.8.3",
+		"lightgallery": "^2.7.1",
+		"photoswipe": "^5.3.8",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-hook-form": "^7.44.3",
