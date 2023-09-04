@@ -28,33 +28,17 @@ export const footerLists = [
 				slug: '/company/about',
 			},
 			{
-				title: 'Blog',
-				slug: '/blog',
-			},
-			{
-				title: 'Contact',
+				title: 'Contattaci',
 				slug: '/company/contact',
-			},
+			}
 		],
 	},
 	{
-		title: 'Theme',
+		title: 'Prodotti',
 		items: [
 			{
 				title: 'I nostri prodotti',
-				slug: '/theme/get-started',
-			},
-			{
-				title: 'Style Guide',
-				slug: '/theme/style-guide',
-			},
-			{
-				title: 'Theme Setup',
-				slug: '/theme/theme-setup',
-			},
-			{
-				title: 'Customizing Odyssey',
-				slug: '/theme/customizing-odyssey',
+				slug: '/products',
 			}
 		],
 	},

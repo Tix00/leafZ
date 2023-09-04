@@ -1,22 +1,20 @@
 ---
-import { TextSection } from '@littlesticks/odyssey-theme-components';
-import Layout from '../../layouts/Page.astro';
-import HeroSection from '../../components/sections/heros/HeroSection.astro';
+import { TextSection } from "@littlesticks/odyssey-theme-components";
+import Layout from "../../layouts/Page.astro";
+import HeroSection from "../../components/sections/heros/HeroSection.astro";
 
 const seo = {
-	title: 'About | Astro Odyssey Theme',
-	description: 'About Page',
+  title: "About | Astro Odyssey Theme",
+  description: "About Page",
 };
 ---
 
 <Layout {seo}>
-	<HeroSection>
-		<div slot="text-container">
-			<h1>Dicono di noi</h1>
-			<p>
-				
-			</p>
-		</div>
+  <HeroSection>
+    <div slot="text-container">
+      <h1>Dicono di noi</h1>
+      <p></p>
+    </div>
     <picture slot="image-container">
       <img
         src="/assets/images/coconutshells.jpg"
@@ -24,21 +22,40 @@ const seo = {
         id="home-hero-image"
       />
     </picture>
-	</HeroSection>
-  <TextSection narrow>
+  </HeroSection>
+  <TextSection>
+    <h3>Ambiente</h3>
     <p>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo asperiores alias illo accusamus voluptatem ea cum nemo odit! Consequatur quidem quo iusto quam ea neque nisi dolorum quod, recusandae id!
-      Repudiandae, fugit labore voluptatum beatae modi omnis adipisci corrupti aut aliquid cumque inventore iure possimus doloremque iste incidunt nulla architecto. Nobis iusto sunt voluptatem necessitatibus laborum, earum doloremque fugit rerum!
+      Siamo una squadra appassionata di individui uniti dalla nostra profonda
+      dedizione all'ambiente. La nostra missione è nata dalla convinzione che è
+      possibile coniugare la passione per la sostenibilità con la creazione di
+      prodotti di alta qualità. <br />Ogni gioiello e oggetto in gusci di cocco
+      che portiamo alla luce è una manifestazione tangibile di questo impegno.
+      La nostra storia è guidata dalla visione di contribuire positivamente al
+      pianeta, utilizzando materiali riciclati o provenienti da fonti
+      sostenibili.<br />Ciò che ci spinge è la consapevolezza che anche le
+      azioni più piccole possono avere un impatto significativo. Siamo
+      orgogliosi di essere una voce per l'ambiente e di creare prodotti che
+      riflettono la nostra passione. Siamo grati per il supporto della nostra
+      comunità di clienti che condivide i nostri valori, e continueremo a
+      lavorare instancabilmente per un futuro più sostenibile.
     </p>
-    <p>Fugit asperiores harum consectetur sapiente deleniti. Optio enim tenetur impedit reprehenderit labore, illo eius in, consequatur odio dolore iste assumenda explicabo, nisi similique qui obcaecati possimus delectus reiciendis quod modi.</p>
-    
+    <h3>Determinazione</h3>
     <p>
-      Vel tempore rem omnis esse officiis optio, explicabo, quod deleniti adipisci ullam cum necessitatibus eius minus vero saepe ad, dicta rerum praesentium deserunt illo itaque odio corrupti voluptatum quibusdam. Pariatur.
-      Porro neque tempore, illum eligendi deleniti iure dolorem amet magnam at dolores veniam nemo cumque aut alias repellat est dicta sit repellendus facilis officia? Minima dolorum quo ducimus adipisci perferendis.
-    </p>
-    <p>
-      Quis distinctio tempora sequi sit repudiandae cumque nostrum deserunt, voluptatibus rem eum fuga modi beatae cum ullam delectus dicta atque eius nam quos corporis. Animi praesentium quae nobis. Odit, mollitia. Voluptatum, hic explicabo. Ex accusamus ipsa ea dolor commodi quas esse ipsum alias et adipisci error necessitatibus atque facere rerum ratione consequatur aspernatur repudiandae minima consectetur fuga, doloremque dolorum pariatur.
-      Ipsam error eaque velit possimus porro eum quod illo iusto officia magnam magni, beatae nisi voluptate praesentium? Saepe distinctio adipisci quas hic quae facilis? Sequi eum hic aperiam impedit minus?
+      Siamo un gruppo di individui straordinariamente determinati, uniti da una
+      fiamma ardente che ci spinge a compiere azioni significative. La nostra
+      missione di combinare la passione per l'ecosostenibilità con la creazione
+      di prodotti di alta qualità è alimentata dalla nostra inarrestabile
+      determinazione. <br />Ogni gioiello e oggetto in gusci di cocco che
+      realizziamo è un testamento a quanto sia potente il perseguimento di un
+      obiettivo. La nostra storia è plasmata dalla visione di un mondo migliore,
+      in cui ogni scelta conta nel contribuire al bene del pianeta. Siamo mossi
+      dalla ferma convinzione che possiamo fare la differenza, una tazza in
+      guscio di cocco alla volta. Siamo orgogliosi di essere dei veri agenti di
+      cambiamento e di creare prodotti che sono manifestazioni della nostra
+      determinazione. <br /><br />Siamo grati per il supporto della comunità di
+      clienti che condividono la nostra stessa determinazione e continueremo a
+      lottare con passione per un futuro più sostenibile.
     </p>
   </TextSection>
 </Layout>

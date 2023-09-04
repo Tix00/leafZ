@@ -4,36 +4,71 @@ import {
   FormInput,
   FormSelect,
   FormTextarea,
+  TextSection,
 } from "@littlesticks/odyssey-theme-components";
 
 const selectOptions = ["Google Search", "Social Media", "Email"];
 ---
 
-<form
-  name="Contact Form"
-  method="POST"
-  action="https://api.web3forms.com/submit"
->
+<form name="Contact Form" method="POST" action="" id="contactForm">
   <input
     type="hidden"
     name="access_key"
     value="a51d5c4e-90ed-43e0-8039-0a629740d1df"
   />
-  <FormInput type="text" label="Name" name="Name" placeholder="John Doe" />
+  <FormInput type="text" label="Name" name="Nome" placeholder="John Doe" />
   <FormInput
     type="email"
     label="Email"
     name="Email"
     placeholder="hello@example.com"
   />
-  <FormSelect label="How Did You Hear About Us?" options={selectOptions} />
+  <FormSelect label="Come hai sentito di noi?" options={selectOptions} />
   <FormTextarea
-    label="Message"
+    label="Messaggio"
     name="Message"
     placeholder="Your message here...s"
   />
   <Button>Submit</Button>
 </form>
+
+<script is:inline>
+const form = document.getElementById("contactForm");
+
+form.addEventListener("submit", function (e) {
+  const formData = new FormData(form);
+  e.preventDefault();
+  var object = {};
+  formData.forEach((value, key) => {
+    object[key] = value;
+  });
+  var json = JSON.stringify(object);
+
+  fetch("https://api.web3forms.com/submit", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+    body: json,
+  })
+    .then(async (response) => {
+      let json = await response.json();
+      if (response.status == 200) {
+        window.location.replace("leafzen.net/company/successForm");
+      } else {
+        console.log(response);
+      }
+    })
+    .catch((error) => {
+      console.log(error);
+    })
+    .then(function () {
+      form.reset();
+      setTimeout(() => { }, 5000);
+    });
+});
+</script>
 
 <style>
   form {
