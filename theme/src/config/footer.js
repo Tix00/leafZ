@@ -38,7 +38,7 @@ export const footerLists = [
 		items: [
 			{
 				title: 'I nostri prodotti',
-				slug: '/products',
+				slug: '/company/products',
 			}
 		],
 	},
